@@ -1,0 +1,913 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>寸止大赛每日大赛-线上挑战赛制_参赛项目分类_观赛与报名攻略</title>
+<meta name="description" content="寸止大赛每日大赛是每日开赛的线上挑战赛事门户，汇集赛制规则、项目分类、每日赛程与选手表现解析，帮助想报名参赛或围观每日对局的人快速找到入口与看点。">
+<meta name="keywords" content="线上挑战赛制,参赛项目分类,每日赛程,观赛攻略,选手表现解析">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23161b2e'/%3E%3Ccircle cx='32' cy='32' r='18' fill='none' stroke='%23f2b544' stroke-width='4' stroke-dasharray='6 5'/%3E%3Cpath d='M32 20v12l8 6' stroke='%23f2b544' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#151a2b;
+  --ink-2:#2a3250;
+  --paper:#f5f6fa;
+  --panel:#ffffff;
+  --line:#e2e5ef;
+  --line-strong:#c9cfdf;
+  --gold:#c98a12;
+  --gold-soft:#fdf3dc;
+  --blue:#2f4d9e;
+  --blue-soft:#eaeffb;
+  --muted:#6a7288;
+  --red:#b23b3b;
+  --green:#2c7a5b;
+  --radius:12px;
+  --radius-sm:8px;
+  --shadow:0 1px 2px rgba(21,26,43,.05),0 6px 18px rgba(21,26,43,.06);
+  --ann-h:34px;
+  --head-h:62px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--font);
+  color:var(--ink);
+  background:var(--paper);
+  font-size:15px;
+  line-height:1.75;
+  -webkit-text-size-adjust:100%;
+}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--blue)}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700}
+p{margin:0 0 .8em}
+ul,ol{margin:0 0 .8em;padding-left:1.2em}
+li{margin-bottom:.35em}
+:target{scroll-margin-top:calc(var(--ann-h) + var(--head-h) + 14px)}
+.wrap{max-width:1360px;margin:0 auto;padding:0 18px}
+
+/* 公告条 */
+.annbar{
+  position:sticky;top:0;z-index:60;
+  background:linear-gradient(90deg,#161b2e,#2a3250 60%,#3a3560);
+  color:#f3e9cf;
+  height:var(--ann-h);
+  display:flex;align-items:center;
+  font-size:12.5px;
+  letter-spacing:.2px;
+}
+.annbar .wrap{display:flex;align-items:center;gap:12px;width:100%;overflow:hidden}
+.annbar b{color:#f2b544;font-weight:700}
+.annbar .dot{width:6px;height:6px;border-radius:50%;background:#f2b544;flex:none}
+.annbar .txt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.annbar a{margin-left:auto;color:#f2b544;border-bottom:1px dotted #f2b544;flex:none}
+
+/* 页头 */
+.site-head{
+  position:sticky;top:var(--ann-h);z-index:55;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+  height:var(--head-h);
+}
+.site-head .wrap{display:flex;align-items:center;gap:22px;height:100%}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand svg{display:block}
+.brand .bname{font-size:19px;font-weight:800;letter-spacing:.5px;color:var(--ink)}
+.brand .bsub{display:block;font-size:10.5px;color:var(--muted);letter-spacing:2px;font-weight:500;margin-top:-2px}
+.head-nav{display:flex;gap:4px;flex-wrap:nowrap;overflow:hidden}
+.head-nav a{
+  font-size:13.5px;padding:6px 10px;border-radius:999px;color:var(--ink-2);white-space:nowrap;
+}
+.head-nav a:hover{background:var(--blue-soft);color:var(--blue)}
+.head-tools{margin-left:auto;display:flex;align-items:center;gap:10px;flex:none}
+.searchbox{display:flex;align-items:center;border:1px solid var(--line-strong);border-radius:999px;padding:3px 4px 3px 12px;background:#fff}
+.searchbox input{border:0;outline:0;font:inherit;font-size:13px;width:132px;background:transparent;color:var(--ink)}
+.searchbox input::placeholder{color:#9aa1b5}
+.searchbox button{
+  border:0;background:var(--ink);color:#fff;font:inherit;font-size:12.5px;
+  padding:4px 12px;border-radius:999px;cursor:pointer;
+}
+.searchbox button:hover{background:var(--blue)}
+.searchbox button:focus-visible,.head-nav a:focus-visible,.btn:focus-visible,.cat-btn:focus-visible,summary:focus-visible,a:focus-visible{
+  outline:2px solid var(--blue);outline-offset:2px;
+}
+.btn{
+  display:inline-block;font-size:13px;font-weight:600;padding:7px 16px;border-radius:999px;
+  background:var(--gold);color:#1d1405;border:1px solid #b57c0d;
+}
+.btn:hover{background:#dfa02a;color:#1d1405}
+.btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line-strong)}
+.btn.ghost:hover{background:var(--blue-soft);color:var(--blue)}
+
+/* 首屏 */
+.hero{
+  background:
+    radial-gradient(900px 320px at 82% -30%,rgba(201,138,18,.18),transparent 70%),
+    radial-gradient(700px 300px at 8% 120%,rgba(47,77,158,.14),transparent 70%),
+    #10142a;
+  color:#eef1f8;
+  border-bottom:1px solid #0b0f1f;
+}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:34px;padding-top:34px;padding-bottom:34px;align-items:center}
+.hero .kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:2px;color:#f2b544;border:1px solid rgba(242,181,68,.45);border-radius:999px;padding:3px 12px;margin-bottom:14px}
+.hero h1{font-size:34px;letter-spacing:1px;color:#fff;margin-bottom:12px}
+.hero .lead{font-size:14.5px;color:#c3c9db;max-width:560px;margin-bottom:16px}
+.hero .facts{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:20px}
+.hero .facts div{font-size:12.5px;color:#a9b1c8}
+.hero .facts b{display:block;font-size:19px;color:#f2b544;font-weight:800;letter-spacing:.5px}
+.hero .cta{display:flex;gap:10px;flex-wrap:wrap}
+.hero .cta .btn.ghost{background:rgba(255,255,255,.06);color:#eef1f8;border-color:rgba(255,255,255,.28)}
+.hero .cta .btn.ghost:hover{background:rgba(255,255,255,.14);color:#fff}
+.hero-art{position:relative;display:flex;justify-content:center}
+.hero-art svg{width:100%;max-width:400px;height:auto}
+.hero-art .cap{position:absolute;bottom:-4px;right:6px;font-size:11px;color:#7d87a3;letter-spacing:1px}
+
+/* 三栏 */
+.layout{display:grid;grid-template-columns:184px minmax(0,1fr) 250px;gap:24px;padding-top:24px;padding-bottom:40px;align-items:start}
+.col-left,.col-right{position:sticky;top:calc(var(--ann-h) + var(--head-h) + 16px);max-height:calc(100vh - var(--ann-h) - var(--head-h) - 32px);overflow:auto;padding-right:2px}
+.col-left::-webkit-scrollbar,.col-right::-webkit-scrollbar{width:5px}
+.col-left::-webkit-scrollbar-thumb,.col-right::-webkit-scrollbar-thumb{background:#cfd5e4;border-radius:9px}
+
+/* 侧栏通用 */
+.side-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:12px 12px 10px;margin-bottom:14px;box-shadow:var(--shadow)}
+.side-title{font-size:12px;letter-spacing:1.6px;color:var(--muted);font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.side-title::before{content:"";width:3px;height:12px;background:var(--gold);border-radius:2px}
+.chlist{list-style:none;padding:0;margin:0}
+.chlist li{margin:0}
+.chlist a{display:flex;justify-content:space-between;gap:6px;font-size:13px;padding:5px 7px;border-radius:6px;color:var(--ink-2)}
+.chlist a:hover{background:var(--blue-soft);color:var(--blue)}
+.chlist a span{color:#9aa1b5;font-size:11px}
+.toc{list-style:none;padding:0;margin:0;font-size:12.5px}
+.toc li{margin:0}
+.toc a{display:block;padding:4px 7px;border-left:2px solid transparent;border-radius:0 6px 6px 0;color:var(--ink-2)}
+.toc a:hover{border-left-color:var(--gold);background:var(--gold-soft);color:var(--ink)}
+.hotlist{list-style:none;padding:0;margin:0;counter-reset:h}
+.hotlist li{counter-increment:h;display:flex;gap:8px;padding:6px 0;border-bottom:1px dashed var(--line);font-size:12.8px}
+.hotlist li:last-child{border-bottom:0}
+.hotlist li::before{content:counter(h);flex:none;width:17px;height:17px;border-radius:4px;background:#eef1f8;color:var(--muted);font-size:11px;display:flex;align-items:center;justify-content:center;font-weight:700;margin-top:3px}
+.hotlist li:nth-child(-n+3)::before{background:var(--gold);color:#241905}
+.hotlist a{color:var(--ink-2)}
+.hotlist small{display:block;color:#98a0b6;font-size:11px}
+
+/* 中栏板块 */
+.sec{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;margin-bottom:20px;box-shadow:var(--shadow)}
+.sec > h2{font-size:19px;letter-spacing:.4px;margin-bottom:4px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.sec > h2 .tag{font-size:11px;font-weight:600;letter-spacing:1px;color:var(--gold);background:var(--gold-soft);border:1px solid #f0dfb6;border-radius:999px;padding:1px 9px}
+.sec .sub{color:var(--muted);font-size:13px;margin-bottom:14px}
+.sec h3{font-size:15.5px;margin:16px 0 6px;color:var(--ink)}
+.sec h3::before{content:"";display:inline-block;width:6px;height:6px;background:var(--gold);border-radius:2px;margin-right:7px;vertical-align:2px}
+.sec p{font-size:14px;color:#333a52}
+.sec p.quote{border-left:3px solid var(--gold);background:#fbf8f0;padding:8px 12px;border-radius:0 8px 8px 0;color:#4a4f63}
+
+/* 内容简介 */
+.intro .meta-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.pill{font-size:11.5px;padding:2px 10px;border-radius:999px;background:#eef1f8;color:#4b5470;border:1px solid var(--line)}
+.pill.gold{background:var(--gold-soft);color:#8a5c05;border-color:#f0dfb6}
+.pill.blue{background:var(--blue-soft);color:#2b447f;border-color:#d4deff}
+
+/* 热门卡片 */
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.card{border:1px solid var(--line);border-radius:var(--radius-sm);padding:12px 13px;background:#fcfdff;display:flex;flex-direction:column;gap:6px;transition:border-color .15s,transform .15s}
+.card:hover{border-color:#c9d3ee;transform:translateY(-1px)}
+.card .c-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.card h4{font-size:14.5px;line-height:1.45;margin:0}
+.card h4 a{color:var(--ink)}
+.card .type{flex:none;font-size:11px;font-weight:700;color:#fff;background:var(--ink-2);border-radius:5px;padding:1px 7px;letter-spacing:.5px}
+.card .type.t2{background:#8a5c05}
+.card .type.t3{background:#2b447f}
+.card .desc{font-size:12.8px;color:#4d5470;margin:0}
+.card .tags{display:flex;gap:5px;flex-wrap:wrap}
+.card .tags span{font-size:11px;color:#5d6580;background:#f0f2f9;border-radius:4px;padding:1px 7px}
+.card .foot{margin-top:auto;display:flex;gap:12px;font-size:11.5px;color:#8b93a9;border-top:1px dashed var(--line);padding-top:6px}
+.card .foot b{color:var(--red);font-weight:700}
+
+/* 最新更新列表 */
+.updates{list-style:none;padding:0;margin:0;display:grid;gap:0}
+.updates li{display:grid;grid-template-columns:58px 1fr;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:13.5px}
+.updates li:last-child{border-bottom:0}
+.updates .time{font-size:11.5px;color:#8b93a9;font-variant-numeric:tabular-nums;padding-top:2px}
+.updates .u-name{font-weight:600;color:var(--ink-2)}
+.updates .u-name .lbl{font-size:10.5px;color:var(--green);border:1px solid #bfe0d1;background:#eef8f3;border-radius:4px;padding:0 5px;margin-left:6px;font-weight:600}
+.updates .u-desc{font-size:12.8px;color:#5c6479;display:block;margin-top:1px}
+
+/* 分类入口 */
+.cats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.cat-btn{
+  display:block;text-align:left;border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:10px 11px;background:#fcfdff;cursor:pointer;font:inherit;color:var(--ink);
+}
+.cat-btn:hover{border-color:#c9d3ee;background:#f7f9ff}
+.cat-btn b{display:block;font-size:13.5px}
+.cat-btn small{color:#8b93a9;font-size:11.5px;display:block;margin-top:1px}
+.cat-note{font-size:12.5px;color:var(--muted);margin-top:10px}
+.cat-note b{color:var(--ink-2)}
+
+/* 深度解析 */
+.deep p{font-size:14px}
+.deep .cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:12px 0}
+.panel{border:1px solid var(--line);border-radius:var(--radius-sm);padding:11px 13px;background:#fcfdff}
+.panel h4{font-size:13.5px;margin-bottom:6px;color:var(--ink-2)}
+.panel ul{padding-left:1.1em;margin:0;font-size:13px;color:#4d5470}
+.panel li{margin-bottom:.3em}
+.compare{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0 4px}
+.compare th,.compare td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+.compare th{background:#f3f6fd;font-weight:700;color:var(--ink-2);font-size:12.5px}
+.compare td{color:#4d5470}
+.steps{counter-reset:s;list-style:none;padding:0;margin:10px 0}
+.steps li{counter-increment:s;position:relative;padding-left:34px;margin-bottom:9px;font-size:13.5px;color:#3d445c}
+.steps li::before{content:counter(s);position:absolute;left:0;top:1px;width:22px;height:22px;border-radius:50%;background:var(--ink);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+
+/* 体验指南 */
+.guide-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.guide-grid .gitem{border:1px solid var(--line);border-radius:var(--radius-sm);padding:10px 12px;background:#fcfdff}
+.guide-grid .gitem b{font-size:13.5px;display:block;margin-bottom:3px}
+.guide-grid .gitem p{font-size:12.8px;margin:0;color:#4d5470}
+
+/* FAQ */
+details{border:1px solid var(--line);border-radius:var(--radius-sm);margin-bottom:8px;background:#fcfdff}
+details[open]{border-color:#c9d3ee;background:#fff}
+summary{cursor:pointer;padding:10px 34px 10px 13px;font-size:14px;font-weight:600;color:var(--ink-2);position:relative;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:13px;top:8px;font-size:17px;color:var(--gold);font-weight:700}
+details[open] summary::after{content:"–"}
+details .ans{padding:0 14px 12px;font-size:13.2px;color:#4d5470;border-top:1px dashed var(--line);margin-top:0;padding-top:9px}
+
+/* 评论 */
+.comments{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cmt{border:1px solid var(--line);border-radius:var(--radius-sm);padding:9px 11px;background:#fcfdff;font-size:13px;color:#3d445c}
+.cmt .who{display:flex;justify-content:space-between;font-size:11.5px;color:#8b93a9;margin-bottom:3px}
+.cmt .who b{color:var(--ink-2);font-size:12.5px}
+
+/* 资讯 */
+.news{list-style:none;padding:0;margin:0}
+.news li{padding:9px 0;border-bottom:1px dashed var(--line)}
+.news li:last-child{border-bottom:0}
+.news .n-top{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.news .n-top a{font-size:14px;font-weight:600;color:var(--ink-2)}
+.news .n-date{font-size:11.5px;color:#8b93a9;font-variant-numeric:tabular-nums}
+.news p{font-size:12.8px;color:#5c6479;margin:2px 0 0}
+
+/* 相关推荐 */
+.reco{display:flex;flex-wrap:wrap;gap:8px}
+.reco a{font-size:12.8px;border:1px solid var(--line-strong);border-radius:999px;padding:4px 12px;color:var(--ink-2);background:#fcfdff}
+.reco a:hover{background:var(--gold-soft);border-color:#e6cf9b;color:#7a5104}
+.reco a small{color:#9aa1b5}
+
+/* 时间线 */
+.timeline{list-style:none;padding:0;margin:0;position:relative}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--gold),#e6eaf5)}
+.timeline li{position:relative;padding-left:26px;margin-bottom:11px;font-size:13.2px;color:#3d445c}
+.timeline li::before{content:"";position:absolute;left:2px;top:6px;width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid var(--gold)}
+.timeline b{display:block;font-size:13.5px;color:var(--ink-2)}
+.timeline span{font-size:11.5px;color:#8b93a9}
+
+/* 引语 */
+.quote-card{border-left:4px solid var(--gold);background:#fdfaf2;border-radius:0 10px 10px 0;padding:12px 15px;font-size:13.5px;color:#4a4f63}
+.quote-card b{display:block;margin-top:6px;font-size:12px;color:#8b93a9;font-weight:600}
+
+/* 搜索无结果 */
+.no-result{display:none;font-size:13px;color:var(--red);background:#fdf1f1;border:1px solid #f2d2d2;border-radius:8px;padding:7px 11px;margin-bottom:12px}
+.no-result.on{display:block}
+
+/* 页尾 */
+.site-foot{background:#10142a;color:#b9c0d4;padding:30px 0 18px;font-size:13px;margin-top:8px}
+.site-foot .fgrid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:22px;padding-bottom:20px;border-bottom:1px solid #232a44}
+.site-foot h4{font-size:13px;color:#fff;margin-bottom:8px;letter-spacing:1px}
+.site-foot ul{list-style:none;padding:0;margin:0}
+.site-foot li{margin-bottom:4px}
+.site-foot a{color:#b9c0d4}
+.site-foot a:hover{color:#f2b544}
+.site-foot .fbrand .bname{font-size:17px;color:#fff;font-weight:800;letter-spacing:.5px}
+.site-foot .fbrand p{font-size:12.5px;color:#8b93ab;margin:6px 0 0;max-width:290px}
+.site-foot .bottom{padding-top:12px;font-size:11.5px;color:#7d87a3;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (max-width:1100px){
+  .layout{grid-template-columns:168px minmax(0,1fr);}
+  .col-right{position:static;max-height:none;grid-column:1 / -1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:start}
+  .col-right .side-card{margin-bottom:0}
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-art{display:none}
+  .head-nav{display:none}
+}
+@media (max-width:820px){
+  .layout{grid-template-columns:1fr;gap:16px}
+  .col-left{position:static;max-height:none;order:0;display:flex;gap:12px;overflow-x:auto;padding-bottom:4px}
+  .col-left .side-card{margin-bottom:0;flex:none;min-width:230px}
+  .col-right{grid-template-columns:1fr 1fr}
+  .cards{grid-template-columns:1fr}
+  .cats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .comments{grid-template-columns:1fr}
+  .deep .cols{grid-template-columns:1fr}
+  .guide-grid{grid-template-columns:1fr}
+  .site-foot .fgrid{grid-template-columns:1fr 1fr}
+  .searchbox input{width:96px}
+  .brand .bsub{display:none}
+}
+@media (max-width:560px){
+  .hero h1{font-size:26px}
+  .annbar{font-size:11.5px}
+  .annbar a{display:none}
+  .col-right{grid-template-columns:1fr}
+  .sec{padding:16px 14px}
+  .site-head .wrap{gap:10px}
+  .brand .bname{font-size:16px}
+  .searchbox{padding-left:9px}
+  .searchbox input{width:74px;font-size:12px}
+  .searchbox button{padding:4px 9px;font-size:12px}
+  .site-foot .fgrid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="annbar" role="region" aria-label="赛事公告">
+  <div class="wrap">
+    <span class="dot" aria-hidden="true"></span>
+    <span class="txt"><b>今日赛程已开</b> · 寸止大赛每日大赛 第 128 期挑战项目公布，限时挑战与耐力挑战同步开赛</span>
+    <a href="/#daily-updates">查看今日对阵</a>
+  </div>
+</div>
+
+<!-- 吸顶页头 -->
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/#top" aria-label="寸止大赛每日大赛首页">
+      <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#161b2e"/>
+        <circle cx="32" cy="32" r="18" fill="none" stroke="#f2b544" stroke-width="4" stroke-dasharray="6 5"/>
+        <path d="M32 20v12l8 6" stroke="#f2b544" stroke-width="4" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span>
+        <span class="bname">寸止大赛每日大赛</span>
+        <span class="bsub">DAILY CUNZHI ARENA</span>
+      </span>
+    </a>
+    <nav class="head-nav" aria-label="频道导航">
+      <a href="/#intro">赛事简介</a>
+      <a href="/#hot-picks">热门项目</a>
+      <a href="/#daily-updates">每日赛程</a>
+      <a href="/#categories">项目分类</a>
+      <a href="/#deep-read">赛制解析</a>
+      <a href="/#faq">常见问题</a>
+    </nav>
+    <div class="head-tools">
+      <form class="searchbox" role="search" onsubmit="return false;">
+        <label for="q" class="visually-hidden" style="position:absolute;left:-9999px">站内搜索</label>
+        <input id="q" type="search" placeholder="搜项目 / 选手 / 赛制" autocomplete="off">
+        <button type="button" id="qbtn">查找</button>
+      </form>
+      <a class="btn" href="/#categories">报名入口</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- 首屏 -->
+  <section class="hero" aria-label="赛事首屏">
+    <div class="wrap">
+      <div>
+        <span class="kicker">每日开赛 · 线上挑战</span>
+        <h1>寸止大赛每日大赛</h1>
+        <p class="lead">每天一场的线上挑战赛，围绕控制力、耐力与节奏判断设置项目。这里汇整赛制规则、项目分类、当日赛程与选手表现拆解，报名参赛或纯观赛都能找到对应入口。</p>
+        <div class="facts">
+          <div><b>128</b>已开赛期数</div>
+          <div><b>6</b>常设项目分类</div>
+          <div><b>每日 20:00</b>当日结算</div>
+          <div><b>3 级</b>难度分组</div>
+        </div>
+        <div class="cta">
+          <a class="btn" href="/#daily-updates">看今日赛程</a>
+          <a class="btn ghost" href="/#deep-read">读赛制规则</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 380 300" role="img" aria-label="每日挑战节奏示意">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#f2b544" stop-opacity=".9"/>
+              <stop offset="1" stop-color="#c98a12" stop-opacity=".35"/>
+            </linearGradient>
+          </defs>
+          <rect x="18" y="24" width="344" height="252" rx="16" fill="#1b2138" stroke="#2f3854"/>
+          <circle cx="190" cy="150" r="86" fill="none" stroke="#2f3854" stroke-width="2" stroke-dasharray="4 7"/>
+          <circle cx="190" cy="150" r="62" fill="none" stroke="url(#g1)" stroke-width="3" stroke-dasharray="10 8"/>
+          <circle cx="190" cy="150" r="26" fill="#f2b544" opacity=".16"/>
+          <path d="M190 150 L190 96" stroke="#f2b544" stroke-width="5" stroke-linecap="round"/>
+          <path d="M190 150 L232 172" stroke="#8fa2d8" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="190" cy="150" r="6" fill="#f2b544"/>
+          <g fill="#8b93ab" font-size="11" font-family="sans-serif">
+            <text x="34" y="56">项目 A · 限时</text>
+            <text x="34" y="74">项目 B · 耐力</text>
+            <text x="34" y="92">项目 C · 节奏</text>
+          </g>
+          <g fill="#f2b544" font-size="11" font-family="sans-serif">
+            <text x="252" y="256">今日 20:00 结算</text>
+          </g>
+          <rect x="250" y="46" width="86" height="34" rx="8" fill="#232a44" stroke="#39425f"/>
+          <text x="262" y="68" fill="#c3c9db" font-size="12" font-family="sans-serif">第 128 期</text>
+        </svg>
+        <span class="cap">赛程节奏示意</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap layout">
+
+    <!-- 左栏 -->
+    <aside class="col-left" aria-label="频道与栏目索引">
+      <div class="side-card">
+        <div class="side-title">频道导航</div>
+        <ul class="chlist">
+          <li><a href="/#intro">赛事简介<span>01</span></a></li>
+          <li><a href="/#hot-picks">热门项目<span>02</span></a></li>
+          <li><a href="/#daily-updates">每日赛程<span>03</span></a></li>
+          <li><a href="/#categories">项目分类<span>04</span></a></li>
+          <li><a href="/#deep-read">赛制深度解析<span>05</span></a></li>
+          <li><a href="/#guide">观赛与参赛指南<span>06</span></a></li>
+          <li><a href="/#faq">常见问题<span>07</span></a></li>
+          <li><a href="/#comments">观众评论<span>08</span></a></li>
+          <li><a href="/#news">赛事资讯<span>09</span></a></li>
+          <li><a href="/#reco">相关推荐<span>10</span></a></li>
+          <li><a href="/#timeline">赛程时间线<span>11</span></a></li>
+        </ul>
+      </div>
+      <div class="side-card">
+        <div class="side-title">难度筛选</div>
+        <ul class="chlist">
+          <li><a href="/#categories">入门组 · 首次参赛</a></li>
+          <li><a href="/#categories">进阶组 · 稳定节奏</a></li>
+          <li><a href="/#categories">挑战组 · 高强度耐力</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- 中栏 -->
+    <div class="col-main">
+
+      <!-- 01 内容简介 -->
+      <section class="sec intro" id="intro">
+        <h2>赛事简介：每天一场的控制力挑战 <span class="tag">01</span></h2>
+        <div class="meta-row">
+          <span class="pill gold">每日开赛</span>
+          <span class="pill blue">线上参与</span>
+          <span class="pill">分级难度</span>
+          <span class="pill">公开赛程</span>
+        </div>
+        <p>寸止大赛每日大赛是一档按天开赛的线上挑战赛事，核心比的是对节奏、力度与临场判断的控制能力。每天由主办方公布当日的挑战项目与判定标准，参赛者在规定时间内完成对应动作并提交记录，系统与裁判组按统一尺度核验，当日 20:00 结算并公布名次。与一次性的大型赛事不同，它把比赛拆成可重复参与的短周期单元，让首次尝试的人和长期练习的人都能在同一套规则下比较。</p>
+        <p>赛事目前设有限时挑战、耐力挑战、节奏挑战、精准挑战、组合挑战与自选挑战六个常设方向，每个方向下再按入门、进阶、挑战三级难度分组。这样的分类方式解决了一个很实际的问题：不同基础的人不必挤在同一条赛道上，新手不会因为对手过强而放弃，老手也不会觉得赛程太轻。每天的项目组合会轮换，但判定口径保持一致，便于参赛者横向对比自己不同日期的成绩。</p>
+        <p>观赛侧的体验相对轻量。每期赛程页会列出当日项目、参赛人数、当前领先成绩与结算时间，观众可以按项目分类筛选，也可以直接看当日的综合榜单。赛事方会在结算后给出简短的赛况说明，讲清楚当天哪些环节拉开了差距、哪些判定点容易失分。对于只想了解这类挑战赛在比什么的人，先读赛制解析再看当日赛程，通常比直接翻成绩更有效率。</p>
+        <p>参与门槛并不高，但规则细节不少。报名前需要确认自己所选项目当日的动作要求、计时方式与提交格式，三项任一不符都可能被判无效。赛事不设长期积分门槛，单日成绩独立结算，连续参赛的记录会单独统计，用于展示稳定性而非直接加分。这种设计让“今天有空就参加”和“每天固定打卡”两类人都能找到合适的参与节奏。</p>
+      </section>
+
+      <!-- 02 热门内容推荐 -->
+      <section class="sec" id="hot-picks">
+        <h2>今日热门挑战项目推荐 <span class="tag">02</span></h2>
+        <p class="sub">按当日讨论度与完赛人数排序，覆盖限时、耐力、节奏三类主要方向。</p>
+        <div class="cards">
+          <article class="card">
+            <div class="c-top"><h4><a href="/#hot-picks">限时寸止 · 三十秒定胜负</a></h4><span class="type">限时挑战</span></div>
+            <p class="desc">30 秒内完成三轮节奏切换，超时或节奏错位即扣分。适合反应快、习惯短爆发的人。</p>
+            <div class="tags"><span>限时挑战</span><span>节奏切换</span><span>入门可试</span></div>
+            <div class="foot"><span>完赛 <b>412</b> 人</span><span>难度 入门</span><span>结算 20:00</span></div>
+          </article>
+          <article class="card">
+            <div class="c-top"><h4><a href="/#hot-picks">耐力寸止 · 五分钟稳态</a></h4><span class="type t2">耐力挑战</span></div>
+            <p class="desc">连续五分钟保持同一节奏基准，中途波动超过阈值即记录一次失误，考验稳定性。</p>
+            <div class="tags"><span>耐力挑战</span><span>稳态控制</span><span>进阶向</span></div>
+            <div class="foot"><span>完赛 <b>268</b> 人</span><span>难度 进阶</span><span>结算 20:00</span></div>
+          </article>
+          <article class="card">
+            <div class="c-top"><h4><a href="/#hot-picks">节奏寸止 · 变速跟随</a></h4><span class="type t3">节奏挑战</span></div>
+            <p class="desc">跟随随机变速的节拍完成动作，变速点不可预判，重点看临场调整是否跟得上。</p>
+            <div class="tags"><span>节奏挑战</span><span>变速跟随</span><span>观赛好看</span></div>
+            <div class="foot"><span>完赛 <b>231</b> 人</span><span>难度 进阶</span><span>结算 20:00</span></div>
+          </article>
+          <article class="card">
+            <div class="c-top"><h4><a href="/#hot-picks">精准寸止 · 定点落位</a></h4><span class="type">精准挑战</span></div>
+            <p class="desc">在指定窗口内完成落位，偏差按格计分。动作幅度小，但对时机判断要求高。</p>
+            <div class="tags"><span>精准挑战</span><span>定点落位</span><span>细节拉分</span></div>
+            <div class="foot"><span>完赛 <b>197</b> 人</span><span>难度 挑战</span><span>结算 20:00</span></div>
+          </article>
+          <article class="card">
+            <div class="c-top"><h4><a href="/#hot-picks">组合寸止 · 三段连做</a></h4><span class="type t2">组合挑战</span></div>
+            <p class="desc">限时、耐力、精准各取一段组合成一轮，中间不设休息，综合分决定当日排名。</p>
+            <div class="tags"><span>组合挑战</span><span>三段连做</span><span>综合评分</span></div>
+            <div class="foot"><span>完赛 <b>154</b> 人</span><span>难度 挑战</span><span>结算 20:00</span></div>
+          </article>
+          <article class="card">
+            <div class="c-top"><h4><a href="/#hot-picks">自选寸止 · 自带方案</a></h4><span class="type t3">自选挑战</span></div>
+            <p class="desc">参赛者自报动作方案，经裁判组确认可行性后开赛，评分看完成度与方案难度。</p>
+            <div class="tags"><span>自选挑战</span><span>自带方案</span><span>需提前报备</span></div>
+            <div class="foot"><span>完赛 <b>86</b> 人</span><span>难度 挑战</span><span>结算 20:00</span></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 03 最新更新 -->
+      <section class="sec" id="daily-updates">
+        <h2>每日赛程与最新动态 <span class="tag">03</span></h2>
+        <p class="sub">当日项目调整、判定口径说明与结算进度，按发布时间排列。</p>
+        <ul class="updates">
+          <li data-search="第128期限时挑战开赛">
+            <span class="time">19:42</span>
+            <span><span class="u-name">第 128 期限时挑战开赛<span class="lbl">进行中</span></span><span class="u-desc">三十秒三轮节奏切换，当前最高完成度 96%，剩余名额 38 个。</span></span>
+          </li>
+          <li data-search="耐力挑战判定口径微调">
+            <span class="time">18:10</span>
+            <span><span class="u-name">耐力挑战判定口径微调</span><span class="u-desc">五分钟稳态的波动阈值由 8% 调整为 7%，已报名者按新口径核验。</span></span>
+          </li>
+          <li data-search="第127期结算榜单发布">
+            <span class="time">昨日 20:05</span>
+            <span><span class="u-name">第 127 期结算榜单发布</span><span class="u-desc">组合挑战前三名分差在 1.5 分以内，赛后说明已附在赛程页。</span></span>
+          </li>
+          <li data-search="新手引导场次加开">
+            <span class="time">昨日 16:30</span>
+            <span><span class="u-name">新手引导场次加开</span><span class="u-desc">周末增加两场入门组讲解，重点讲计时方式与提交格式。</span></span>
+          </li>
+          <li data-search="节奏挑战题库更新">
+            <span class="time">昨日 14:12</span>
+            <span><span class="u-name">节奏挑战题库更新</span><span class="u-desc">新增 12 组变速组合，变速点分布更分散，减少可预判性。</span></span>
+          </li>
+          <li data-search="精准挑战窗口收窄">
+            <span class="time">前日 21:20</span>
+            <span><span class="u-name">精准挑战窗口收窄</span><span class="u-desc">定点落位窗口由 0.4 秒收至 0.3 秒，挑战组同步执行。</span></span>
+          </li>
+          <li data-search="连续参赛记录统计上线">
+            <span class="time">前日 11:00</span>
+            <span><span class="u-name">连续参赛记录统计上线</span><span class="u-desc">连续参赛天数单独展示，不计入当日得分，用于观察稳定性。</span></span>
+          </li>
+          <li data-search="第126期赛况复盘">
+            <span class="time">前日 09:40</span>
+            <span><span class="u-name">第 126 期赛况复盘</span><span class="u-desc">复盘指出耐力段失误集中在第三分钟，节奏回落是主要失分点。</span></span>
+          </li>
+          <li data-search="自选挑战报备截止提醒">
+            <span class="time">3 天前</span>
+            <span><span class="u-name">自选挑战报备截止提醒</span><span class="u-desc">自选方案需在开赛前 6 小时提交，逾期顺延至下一期。</span></span>
+          </li>
+          <li data-search="观赛页筛选功能更新">
+            <span class="time">3 天前</span>
+            <span><span class="u-name">观赛页筛选功能更新</span><span class="u-desc">可按难度与项目类型组合筛选，榜单支持只看当日有效成绩。</span></span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 04 分类入口 -->
+      <section class="sec" id="categories">
+        <h2>参赛项目分类与筛选 <span class="tag">04</span></h2>
+        <p class="sub">点击分类可筛选下方热门项目与赛程条目，再次点击取消筛选。</p>
+        <div class="cats" id="catBar">
+          <button class="cat-btn" type="button" data-cat="限时挑战"><b>限时挑战</b><small>短时爆发 · 30 秒级</small></button>
+          <button class="cat-btn" type="button" data-cat="耐力挑战"><b>耐力挑战</b><small>长时间稳态 · 5 分钟</small></button>
+          <button class="cat-btn" type="button" data-cat="节奏挑战"><b>节奏挑战</b><small>变速跟随 · 不可预判</small></button>
+          <button class="cat-btn" type="button" data-cat="精准挑战"><b>精准挑战</b><small>定点落位 · 细节拉分</small></button>
+          <button class="cat-btn" type="button" data-cat="组合挑战"><b>组合挑战</b><small>多段连做 · 综合评分</small></button>
+          <button class="cat-btn" type="button" data-cat="自选挑战"><b>自选挑战</b><small>自带方案 · 需报备</small></button>
+          <button class="cat-btn" type="button" data-cat="入门"><b>入门组</b><small>首次参赛优先</small></button>
+          <button class="cat-btn" type="button" data-cat="挑战组"><b>挑战组</b><small>高强度 · 高判定</small></button>
+        </div>
+        <p class="cat-note" id="catNote">当前显示全部项目。<b>建议</b>：首次参赛先看入门组项目说明，再决定报名方向。</p>
+      </section>
+
+      <!-- 05 深度解析 -->
+      <section class="sec deep" id="deep-read">
+        <h2>赛制深度解析：判定、分组与成绩怎么算 <span class="tag">05</span></h2>
+        <p>很多人第一次看寸止大赛每日大赛的榜单，会误以为名次只由完成速度决定。实际判定由完成度、节奏稳定性与失误次数三项共同构成，不同项目权重不同。理解这套算法，比单纯练动作更能解释为什么同样的完成时间会排出不同名次。</p>
+
+        <h3>三项基础判定：完成度、稳定性、失误</h3>
+        <p>完成度看动作是否达到规定标准，未达标的环节按比例折算；稳定性看整段过程中节奏偏离基准的幅度，偏离越小得分越高；失误按次扣分，同一类失误重复出现会加重扣分。三项并非简单相加，而是先按项目权重加权，再与同组参赛者做相对排序。因此同一天里，完成度接近的两个人，稳定性差距往往才是名次差的主因。</p>
+        <div class="cols">
+          <div class="panel">
+            <h4>判定看什么</h4>
+            <ul>
+              <li>动作是否在窗口内完成</li>
+              <li>节奏偏离是否超过阈值</li>
+              <li>失误次数与类型</li>
+              <li>提交记录是否完整可核验</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h4>容易失分的地方</h4>
+            <ul>
+              <li>前段冲太快，后段节奏回落</li>
+              <li>变速点预判错误导致错位</li>
+              <li>提交格式不符被判无效</li>
+              <li>临近结算匆忙提交，记录不完整</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>三级难度分组的差别</h3>
+        <p>入门组放宽节奏阈值与窗口宽度，重点是让人完整走完流程；进阶组按标准口径判定，是多数参赛者的主战场；挑战组在标准之上收窄窗口，并要求组合项目连做。分组一旦选定，当日不可跨组比较成绩，但可以次日改选。这个设计避免了“新手被高强度项目劝退”和“老手在低难度组刷分”两种极端。</p>
+
+        <table class="compare">
+          <thead>
+            <tr><th>对比项</th><th>入门组</th><th>进阶组</th><th>挑战组</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>节奏阈值</td><td>放宽至 12%</td><td>标准 8%</td><td>收窄至 7%</td></tr>
+            <tr><td>窗口宽度</td><td>0.5 秒</td><td>0.4 秒</td><td>0.3 秒</td></tr>
+            <tr><td>是否可连做</td><td>否</td><td>可选</td><td>必须连做</td></tr>
+            <tr><td>适合人群</td><td>首次参赛</td><td>有练习基础</td><td>追求高强度</td></tr>
+          </tbody>
+        </table>
+
+        <h3>一天之内的参赛流程</h3>
+        <ol class="steps">
+          <li>开赛前查看当日项目说明，确认动作要求、计时方式与提交格式三项。</li>
+          <li>选择难度分组并完成报名，自选挑战需额外提交方案等待确认。</li>
+          <li>在开放时段内完成挑战并提交记录，提交后不可修改。</li>
+          <li>系统初筛记录有效性，裁判组复核边界情况。</li>
+          <li>20:00 结算，公布当日名次与赛况说明。</li>
+        </ol>
+
+        <h3>成绩怎么读：三个容易被忽略的细节</h3>
+        <p>第一，当日名次是相对排序，不是绝对分数，同样的表现放在参赛人数更多的日子，名次可能变化。第二，连续参赛记录单独统计，不叠加到当日得分，它的作用是展示稳定性，不是加分项。第三，赛况说明里的“失分点”是复盘用的，不是判定依据，判定只看提交记录本身。把这三点分清，再看榜单就不会误读。</p>
+        <p class="quote">对多数参赛者来说，寸止大赛每日大赛真正的门槛不在动作难度，而在是否读懂了判定口径。规则读一遍，往往比多练半小时更省失误。</p>
+
+        <h3>项目轮换的逻辑</h3>
+        <p>每日项目并非随机抽取，而是按“短—长—变速—精准—组合”的节奏轮换，避免连续两天都是同类型高强度项目。轮换表提前一周公布，参赛者可以据此安排练习。对观赛者而言，轮换也意味着每天看点不同：限时挑战看爆发，耐力挑战看后段是否掉速，节奏挑战看变速点的应对，组合挑战看体能与判断的分配。</p>
+      </section>
+
+      <!-- 06 体验指南 -->
+      <section class="sec" id="guide">
+        <h2>观赛与参赛体验指南 <span class="tag">06</span></h2>
+        <p class="sub">从找项目到看结算，四个环节各自要确认什么。</p>
+        <div class="guide-grid">
+          <div class="gitem"><b>先定方向再看规则</b><p>按限时、耐力、节奏、精准、组合、自选六个方向选一个，再读该方向当日的动作要求，避免看完一堆规则仍不知道报哪个。</p></div>
+          <div class="gitem"><b>用分类筛选缩小范围</b><p>分类按钮同时作用于热门项目与赛程条目，选中后只显示相关条目，再点一次恢复全部。难度筛选与项目筛选可叠加使用。</p></div>
+          <div class="gitem"><b>观赛看三个位置</b><p>当日项目说明看判定口径，领先成绩看差距，赛况说明看失分点。三处读完，基本能判断这期比赛难在哪。</p></div>
+          <div class="gitem"><b>追更与收藏</b><p>连续参赛记录按天累计，中断即归零；关注的项目可记下期号，按轮换表提前一天回来看赛程，比每天盲刷更省时间。</p></div>
+          <div class="gitem"><b>手机端阅读顺序</b><p>窄屏下频道导航转为横向滑动条，正文按板块顺序排列，侧栏内容移到正文之后，不影响主阅读区的连贯性。</p></div>
+          <div class="gitem"><b>延伸阅读路径</b><p>看完赛制解析仍不清楚判定的，转到常见问题看具体问句；想找同类项目的，从相关推荐标签进入对应方向。</p></div>
+        </div>
+      </section>
+
+      <!-- 07 FAQ -->
+      <section class="sec" id="faq">
+        <h2>关于寸止大赛每日大赛的常见问题 <span class="tag">07</span></h2>
+        <p class="sub">按真实提问整理，覆盖参赛资格、判定、更新与选择四类疑问。</p>
+        <details>
+          <summary>寸止大赛每日大赛适合完全没有基础的人参加吗？</summary>
+          <div class="ans">可以。入门组放宽了节奏阈值与窗口宽度，判定重点是完整走完流程，而不是追求高分。第一次参加建议选入门组的限时或节奏项目，先熟悉报名、提交、结算三个环节，再考虑进阶组。</div>
+        </details>
+        <details>
+          <summary>每日大赛一般几点开赛，多久结算一次？</summary>
+          <div class="ans">开放时段通常在下午，当日 20:00 统一结算并公布名次。结算后不可再提交，逾期记录顺延到下一期无效。具体开放时间以当日赛程页标注为准，轮换表会提前一周公布。</div>
+        </details>
+        <details>
+          <summary>限时挑战和耐力挑战有什么区别，该怎么选？</summary>
+          <div class="ans">限时挑战在 30 秒级窗口内完成多轮节奏切换，看的是短时爆发与反应；耐力挑战要求连续五分钟保持同一节奏基准，看的是后段是否掉速。反应快、习惯短爆发选限时；节奏稳、能长时间保持选耐力。两者判定口径不同，成绩不能直接横向比较。</div>
+        </details>
+        <details>
+          <summary>提交记录被判无效，通常是哪些原因？</summary>
+          <div class="ans">常见原因有三类：动作未在窗口内完成、提交格式与要求不符、记录不完整无法核验。自选挑战还多一条——方案未在开赛前 6 小时报备。被判无效当日不可重交，只能次日重新参赛。</div>
+        </details>
+        <details>
+          <summary>连续参赛记录有什么用，会影响当日名次吗？</summary>
+          <div class="ans">不影响。连续参赛记录单独统计，用于展示稳定性，不叠加到当日得分，也不构成加分项。它的实际用途是帮参赛者观察自己长期节奏是否稳定，而不是换取排名优势。</div>
+        </details>
+        <details>
+          <summary>只想观赛不参赛，看哪些内容比较有效率？</summary>
+          <div class="ans">先看当日赛程里的项目说明与领先成绩，再看结算后的赛况说明，重点读失分点那一段。想了解规则背景的，转去赛制解析看三级难度分组的差别。三处加起来通常十分钟内能看完一期。</div>
+        </details>
+      </section>
+
+      <!-- 08 用户评论 -->
+      <section class="sec" id="comments">
+        <h2>观众与参赛者评论 <span class="tag">08</span></h2>
+        <p class="sub">来自不同难度分组与观赛视角的反馈，含中性评价。</p>
+        <div class="comments">
+          <div class="cmt"><div class="who"><b>北窗听雨</b><span>入门组</span></div>第一次报限时挑战，三十秒比想象中紧，前两轮还行，第三轮直接乱了。规则读得不够细，下次先看判定口径。</div>
+          <div class="cmt"><div class="who"><b>慢半拍的老陈</b><span>进阶组</span></div>耐力挑战五分钟，第三分钟开始掉速，赛况说明里写的失分点跟我实际情况一模一样，复盘挺准。</div>
+          <div class="cmt"><div class="who"><b>阿棠不加糖</b><span>观赛</span></div>不参赛只看榜单，节奏挑战最好看，变速点一错位差距立刻拉开，比限时挑战有戏剧性。</div>
+          <div class="cmt"><div class="who"><b>七号观测员</b><span>挑战组</span></div>组合挑战连做确实累，但综合评分比单项公平，不会因为某一项失手就全盘崩掉。</div>
+          <div class="cmt"><div class="who"><b>青柠气泡</b><span>入门组</span></div>希望新手引导场次能再多一点，报名流程第一次走还是有点绕，尤其是提交格式那一步。</div>
+          <div class="cmt"><div class="who"><b>半山雾</b><span>进阶组</span></div>判定口径微调之后失误明显多了，波动阈值从 8% 收到 7%，看着只差一点，实际体感差挺多。</div>
+          <div class="cmt"><div class="who"><b>路灯下的猫</b><span>观赛</span></div>每日轮换挺好，不会连续两天看同类型，就是有时候忘了当天是什么项目，得翻轮换表。</div>
+          <div class="cmt"><div class="who"><b>江畔独行</b><span>挑战组</span></div>精准挑战窗口收到 0.3 秒以后，容错基本没有了，练了两周才稳定下来，难度是真的上去了。</div>
+          <div class="cmt"><div class="who"><b>一勺盐</b><span>入门组</span></div>整体还行，就是结算时间固定在 20:00，上班日赶不上提交，只能周末参加，这点略遗憾。</div>
+          <div class="cmt"><div class="who"><b>木子李不姓李</b><span>进阶组</span></div>连续参赛记录挺有意思，我打了二十多天没断，看着那条记录比看名次更有成就感。</div>
+          <div class="cmt"><div class="who"><b>南风知意</b><span>观赛</span></div>赛况说明写得比很多赛事清楚，直接讲哪个环节拉开差距，不用自己猜。</div>
+          <div class="cmt"><div class="who"><b>电波系少年</b><span>挑战组</span></div>自选挑战报备流程偏长，方案要等确认，临时起意基本赶不上，得提前一天想好。</div>
+          <div class="cmt"><div class="who"><b>温吞水</b><span>入门组</span></div>动作要求写得清楚，但计时方式的说明可以再具体一点，第一次看不太确定从哪一刻开始算。</div>
+          <div class="cmt"><div class="who"><b>拾阶而上</b><span>进阶组</span></div>组合挑战三段连做中间不休息，体能分配很关键，前段冲太猛后段基本废了，吃过一次亏。</div>
+          <div class="cmt"><div class="who"><b>纸飞机</b><span>观赛</span></div>分类筛选好用，按难度一筛就能只看入门组，不用在榜单里翻半天。</div>
+          <div class="cmt"><div class="who"><b>老槐树</b><span>进阶组</span></div>中立说一句，判定标准整体一致，但边界情况的复核时间偏长，有时候要等到第二天才出结果。</div>
+        </div>
+      </section>
+
+      <!-- 09 相关资讯 -->
+      <section class="sec" id="news">
+        <h2>赛事资讯与规则变动 <span class="tag">09</span></h2>
+        <p class="sub">按发布时间排列，聚焦判定口径、项目轮换与赛程安排。</p>
+        <ul class="news">
+          <li>
+            <div class="n-top"><a href="/#news">耐力挑战波动阈值收紧，第三分钟成关键分水岭</a><span class="n-date">2024-06-18</span></div>
+            <p>阈值由 8% 调整为 7% 后，多数参赛者的失误集中出现在第三分钟，赛况说明建议前段留出余量。</p>
+          </li>
+          <li>
+            <div class="n-top"><a href="/#news">节奏挑战题库新增十二组变速组合</a><span class="n-date">2024-06-17</span></div>
+            <p>新增组合的变速点分布更分散，可预判性下降，观赛侧的差距拉开更明显。</p>
+          </li>
+          <li>
+            <div class="n-top"><a href="/#news">精准挑战窗口宽度调整，挑战组同步执行</a><span class="n-date">2024-06-15</span></div>
+            <p>定点落位窗口由 0.4 秒收至 0.3 秒，入门组与进阶组保持原口径不变。</p>
+          </li>
+          <li>
+            <div class="n-top"><a href="/#news">连续参赛记录统计上线，不计入当日得分</a><span class="n-date">2024-06-14</span></div>
+            <p>记录按天累计，中断归零，官方说明其用途为观察稳定性，不构成排名加分。</p>
+          </li>
+          <li>
+            <div class="n-top"><a href="/#news">周末新增两场入门组讲解，重点讲提交格式</a><span class="n-date">2024-06-12</span></div>
+            <p>讲解覆盖计时起点、提交格式与常见无效原因，适合首次参赛者参加。</p>
+          </li>
+          <li>
+            <div class="n-top"><a href="/#news">自选挑战报备截止时间明确为开赛前六小时</a><span class="n-date">2024-06-10</span></div>
+            <p>逾期提交的方案顺延至下一期，官方提醒临时起意的参赛者提前准备。</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 10 相关推荐 -->
+      <section class="sec" id="reco">
+        <h2>按方向找项目：相关推荐 <span class="tag">10</span></h2>
+        <p class="sub">按具体内容方向索引，与热门推荐的角度不同，偏查找而非浏览。</p>
+        <div class="reco">
+          <a href="/#hot-picks">限时挑战入门项目 <small>· 30 秒级</small></a>
+          <a href="/#hot-picks">五分钟耐力稳态项目 <small>· 进阶向</small></a>
+          <a href="/#hot-picks">变速跟随节奏项目 <small>· 观赛好看</small></a>
+          <a href="/#hot-picks">定点落位精准项目 <small>· 细节拉分</small></a>
+          <a href="/#hot-picks">三段连做组合项目 <small>· 综合评分</small></a>
+          <a href="/#hot-picks">自带方案自选项目 <small>· 需报备</small></a>
+          <a href="/#deep-read">三级难度分组对照 <small>· 判定口径</small></a>
+          <a href="/#faq">提交无效常见原因 <small>· 参赛前必读</small></a>
+        </div>
+      </section>
+
+      <!-- 11 时间线 -->
+      <section class="sec" id="timeline">
+        <h2>一期比赛的赛程时间线 <span class="tag">11</span></h2>
+        <p class="sub">以单个比赛日为轴，标出各环节的时间节点与需要确认的事。</p>
+        <ul class="timeline">
+          <li><b>提前一周 · 轮换表公布</b><span>公布未来七天的项目方向与难度安排</span>按表安排练习，避免临时换方向。</li>
+          <li><b>当日 12:00 · 项目说明上线</b><span>动作要求、计时方式、提交格式三项同步</span>报名前逐项对照，三项任一不符可能被判无效。</li>
+          <li><b>当日 14:00 · 报名开放</b><span>选择难度分组，自选挑战需额外报备</span>自选方案须在开赛前 6 小时提交。</li>
+          <li><b>当日 16:00 · 挑战开放</b><span>完成动作并提交记录，提交后不可修改</span>留出复核时间，不要卡在临近结算。</li>
+          <li><b>当日 19:30 · 系统初筛</b><span>核验记录完整性与格式</span>被判无效的当日不可重交。</li>
+          <li><b>当日 20:00 · 结算公布</b><span>名次、赛况说明与失分点同步发布</span>复盘重点看失分点那一段。</li>
+        </ul>
+        <div class="quote-card" style="margin-top:12px">
+          “每天一场的好处是，失误当天就能修正，不用等一个月。”
+          <b>—— 摘自进阶组参赛者反馈</b>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- 右栏 -->
+    <aside class="col-right" aria-label="辅助阅读">
+      <div class="side-card">
+        <div class="side-title">页内目录</div>
+        <ul class="toc">
+          <li><a href="/#intro">赛事简介</a></li>
+          <li><a href="/#hot-picks">热门项目推荐</a></li>
+          <li><a href="/#daily-updates">每日赛程动态</a></li>
+          <li><a href="/#categories">项目分类筛选</a></li>
+          <li><a href="/#deep-read">赛制深度解析</a></li>
+          <li><a href="/#guide">观赛参赛指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#comments">观众评论</a></li>
+          <li><a href="/#news">赛事资讯</a></li>
+          <li><a href="/#reco">相关推荐</a></li>
+          <li><a href="/#timeline">赛程时间线</a></li>
+        </ul>
+      </div>
+      <div class="side-card">
+        <div class="side-title">今日热门条目</div>
+        <ol class="hotlist">
+          <li><a href="/#hot-picks">限时寸止 · 三十秒定胜负<small>完赛 412 人</small></a></li>
+          <li><a href="/#hot-picks">耐力寸止 · 五分钟稳态<small>完赛 268 人</small></a></li>
+          <li><a href="/#hot-picks">节奏寸止 · 变速跟随<small>完赛 231 人</small></a></li>
+          <li><a href="/#hot-picks">精准寸止 · 定点落位<small>完赛 197 人</small></a></li>
+          <li><a href="/#hot-picks">组合寸止 · 三段连做<small>完赛 154 人</small></a></li>
+          <li><a href="/#hot-picks">自选寸止 · 自带方案<small>完赛 86 人</small></a></li>
+        </ol>
+      </div>
+      <div class="side-card">
+        <div class="side-title">延伸阅读</div>
+        <ul class="chlist">
+          <li><a href="/#deep-read">三级难度怎么选</a></li>
+          <li><a href="/#faq">提交无效的三类原因</a></li>
+          <li><a href="/#news">判定口径变动汇总</a></li>
+          <li><a href="/#timeline">一期比赛的完整节点</a></li>
+          <li><a href="/#guide">手机端阅读与筛选</a></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<!-- 页尾 -->
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <span class="bname">寸止大赛每日大赛</span>
+        <p>每天一场的线上控制力挑战赛事，汇集赛制规则、项目分类、每日赛程与赛况拆解。</p>
+      </div>
+      <div>
+        <h4>赛事内容</h4>
+        <ul>
+          <li><a href="/#intro">赛事简介</a></li>
+          <li><a href="/#hot-picks">热门项目</a></li>
+          <li><a href="/#daily-updates">每日赛程</a></li>
+          <li><a href="/#categories">项目分类</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>规则与帮助</h4>
+        <ul>
+          <li><a href="/#deep-read">赛制深度解析</a></li>
+          <li><a href="/#guide">观赛参赛指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#timeline">赛程时间线</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>社区与资讯</h4>
+        <ul>
+          <li><a href="/#comments">观众评论</a></li>
+          <li><a href="/#news">赛事资讯</a></li>
+          <li><a href="/#reco">相关推荐</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>© 2024 寸止大赛每日大赛 · 内容与规则说明仅用于赛事展示</span>
+      <span>部分内容为示例数据，仅用于展示页面结构</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var q = document.getElementById('q');
+  var qbtn = document.getElementById('qbtn');
+  var catBar = document.getElementById('catBar');
+  var catNote = document.getElementById('catNote');
+  var noRes = document.createElement('div');
+  noRes.className = 'no-result';
+  noRes.textContent = '没有找到匹配的条目，换个关键词或清除筛选试试。';
+  var firstSec = document.querySelector('.col-main .sec');
+  firstSec.parentNode.insertBefore(noRes, firstSec);
+
+  var activeCat = null;
+
+  function matchCat(el){
+    if(!activeCat) return true;
+    var txt = (el.textContent || '') + ' ' + (el.getAttribute('data-search') || '');
+    return txt.indexOf(activeCat) > -1;
+  }
+
+  function runFilter(){
+    var kw = (q.value || '').trim().toLowerCase();
+    var items = document.querySelectorAll('.sec .card, .sec .updates li, .sec .news li, .sec .reco a, .sec .hotlist li');
+    var shown = 0;
+    items.forEach(function(el){
+      var txt = (el.textContent || '').toLowerCase();
+      var okKw = !kw || txt.indexOf(kw) > -1;
+      var okCat = matchCat(el);
+      var show = okKw && okCat;
+      el.style.display = show ? '' : 'none';
+      if(show) shown++;
+    });
+    noRes.classList.toggle('on', shown === 0);
+    if(activeCat){
+      catNote.innerHTML = '当前筛选：<b>' + activeCat + '</b>。再次点击该分类可取消筛选。';
+    }else{
+      catNote.innerHTML = '当前显示全部项目。<b>建议</b>：首次参赛先看入门组项目说明，再决定报名方向。';
+    }
+  }
+
+  qbtn.addEventListener('click', runFilter);
+  q.addEventListener('input', runFilter);
+  q.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); runFilter(); }});
+
+  catBar.addEventListener('click', function(e){
+    var btn = e.target.closest('.cat-btn');
+    if(!btn) return;
+    var cat = btn.getAttribute('data-cat');
+    activeCat = (activeCat === cat) ? null : cat;
+    runFilter();
+  });
+})();
+</script>
+</body>
+                                                                                                                </html>
